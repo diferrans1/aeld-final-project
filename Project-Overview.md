@@ -91,4 +91,4 @@ All project source will be hosted in a single repository at [diferrans1/aeld-fin
 No additional repositories are requested.
 
 # Schedule Page
-See [Final Project Schedule](Final-Project-Schedule)
+See [Final Project Schedule](Final-Project-Schedule.md)

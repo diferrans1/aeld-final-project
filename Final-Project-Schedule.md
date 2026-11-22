@@ -17,13 +17,13 @@ Please use these status icons for the status column:
 ## Project Backlog
 | Target Milestone | Status | Owner  | Issue Link | Definition of Done |
 | ---------------- | ------ | ------ | ---------- | ------------------ |
-| Sprint 1 | :x: | Daniel | [Yocto environment setup (poky + meta-raspberrypi + meta-openembedded, Scarthgap)](TBD) | `bitbake core-image-minimal` succeeds for `MACHINE=raspberrypi3` |
-| Sprint 1 | :x: | Daniel | [Custom layer meta-aesd-bme280 with minimal image + I2C enabled](TBD) | Image recipe builds; `ENABLE_I2C`, `i2c-dev` and `i2c-tools` included |
-| Sprint 1 | :x: | Daniel | [Flash image and boot Raspberry Pi 3](TBD) | Board boots from SD card; login on serial console (and SSH if networking is enabled) |
-| Sprint 2 | :x: | Daniel | [Wire BME280 and validate the I2C bus](TBD) | `i2cdetect -y 1` shows the sensor at 0x76/0x77; register 0xD0 reads `0x60` |
-| Sprint 2 | :x: | Daniel | [User-space bme280-reader app (via /dev/i2c-1)](TBD) | App reads calibration data and prints compensated temperature (°C) and pressure (hPa) |
-| Sprint 2 | :x: | Daniel | [Recipe to build and install bme280-reader in the image](TBD) | App is present on a freshly built image and runs at boot or on demand |
-| Sprint 3 | :x: | Daniel | [BME280 Linux kernel driver (i2c_driver, out-of-tree module)](TBD) | Module probes the sensor and exposes readings through a char device or sysfs |
-| Sprint 3 | :x: | Daniel | [Device tree overlay + module recipe and autoload](TBD) | Driver binds automatically at boot with no manual `insmod` |
-| Sprint 3 | :x: | Daniel | [Reliability testing and validation](TBD) | Readings stay stable over 1 hour or more and match a reference within the sensor's tolerance; error handling verified |
-| Sprint 3 | :x: | Daniel | [Final demo video and documentation](TBD) | Video recorded and wiki pages complete |
+| Sprint 1 | :x: | Daniel | Yocto environment setup (poky + meta-raspberrypi + meta-openembedded, Scarthgap) | `bitbake core-image-minimal` succeeds for `MACHINE=raspberrypi3` |
+| Sprint 1 | :x: | Daniel | Custom layer meta-aesd-bme280 with minimal image + I2C enabled | Image recipe builds; `ENABLE_I2C`, `i2c-dev` and `i2c-tools` included |
+| Sprint 1 | :x: | Daniel | Flash image and boot Raspberry Pi 3 | Board boots from SD card; login on serial console (and SSH if networking is enabled) |
+| Sprint 2 | :x: | Daniel | Wire BME280 and validate the I2C bus | `i2cdetect -y 1` shows the sensor at 0x76/0x77; register 0xD0 reads `0x60` |
+| Sprint 2 | :x: | Daniel | User-space bme280-reader app (via /dev/i2c-1) | App reads calibration data and prints compensated temperature (°C) and pressure (hPa) |
+| Sprint 2 | :x: | Daniel | Recipe to build and install bme280-reader in the image | App is present on a freshly built image and runs at boot or on demand |
+| Sprint 3 | :x: | Daniel | BME280 Linux kernel driver (i2c_driver, out-of-tree module) | Module probes the sensor and exposes readings through a char device or sysfs |
+| Sprint 3 | :x: | Daniel | Device tree overlay + module recipe and autoload | Driver binds automatically at boot with no manual `insmod` |
+| Sprint 3 | :x: | Daniel | Reliability testing and validation | Readings stay stable over 1 hour or more and match a reference within the sensor's tolerance; error handling verified |
+| Sprint 3 | :x: | Daniel | Final demo video and documentation | Video recorded and wiki pages complete |

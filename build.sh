@@ -15,12 +15,13 @@ add_conf() {
 }
 
 add_conf 'MACHINE = "raspberrypi3"'
+add_conf 'DISTRO = "aesd"'
 
-for layer in ../meta-openembedded/meta-oe ../meta-raspberrypi; do
+for layer in ../meta-openembedded/meta-oe ../meta-raspberrypi ../meta-aesd-bme280; do
 	if ! grep -q "$(realpath "$layer")" conf/bblayers.conf; then
 		bitbake-layers add-layer "$layer"
 	fi
 done
 
 bitbake-layers show-layers
-bitbake core-image-minimal
+bitbake aesd-bme280-image
